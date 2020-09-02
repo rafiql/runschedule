@@ -1,0 +1,35 @@
+.btn-login{
+    background-color:  #6b31ff;
+    background-image: none;
+    color: #fff;
+    padding: 6px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+}
+
+.forgot-password{
+    color: #6b31ff;
+}
+
+.remember-section{
+    padding-bottom: 15px;
+}
+
+.login-title{
+    margin-bottom: 30px;
+}
+
+.login-heading{
+    color: #999999;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card{
+    box-shadow: 1px 1px 10px 2px #eaeaea;
+}

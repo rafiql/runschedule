@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{# at the terminal, run pip install django-bootstrap4 #}
+{% load bootstrap4 %}
+
+{% block content %}
+
+<div class="container-fluid h-100">
+
+    <div class="row justify-content-center align-items-center h-100">
+
+        <div class="col col-sm-6 col-md-6 col-lg-5 col-xl-5">
+            <div class="login-title text-center">
+                <h3>Delivery runschedule</h3>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3>Login</h3>
+                    <p class="login-heading">Welcome back, please login to your account.</p>
+                    <form method="POST" class="form">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="id_username">Username</label>
+                            <input type="text" name="username" autocomplete="username" class="form-control"
+                                   placeholder="Username" required="" id="id_username">
+                        </div>
+                        <div class="form-group">
+                            <label for="id_password">Password</label>
+                            <input type="password" name="password" autocomplete="current-password" class="form-control"
+                                   placeholder="Password" required="" id="id_password">
+                        </div>
+                        <div class="row remember-section">
+                            <div class="col-6">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="remember-me">
+                                    <label class="form-check-label" for="remember-me">Remember me</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <a href="#" class="forgot-password float-right">Forgot Password?</a>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default btn-login float-right">Login</button>
+                        </div>
+                        <div></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
