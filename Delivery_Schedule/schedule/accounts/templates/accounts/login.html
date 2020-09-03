@@ -1,23 +1,29 @@
-{% extends "base.html" %}
-
+{% extends "accounts/user_base.html" %}
 {# at the terminal, run pip install django-bootstrap4 #}
-{% load bootstrap4 %}
 
-{% block content %}
+{% block preuser %}
+{% load static %}
+<div class="col-md-5">
+	<div class="content">
+		<h2>
+			Rydges Delivery Runschedule
+		</h2>
+	</div>
+</div>
 
+<div class="col-lg-4 col-xs-6 thumbnail"><img src="{% static 'images/truck.jpg'%}" alt="">
+</div>
+
+{% endblock %}
+
+
+{% block user_content %}
 <div class="container-fluid h-100">
-
     <div class="row justify-content-center align-items-center h-100">
-
         <div class="col col-sm-6 col-md-6 col-lg-5 col-xl-5">
-            <div class="login-title text-center">
-                <h3>Delivery runschedule</h3>
-            </div>
-
             <div class="card">
                 <div class="card-body">
                     <h3>Login</h3>
-                    <p class="login-heading">Welcome back, please login to your account.</p>
                     <form method="POST" class="form">
                         {% csrf_token %}
                         <div class="form-group">
